@@ -72,7 +72,7 @@ body{font-family:'Outfit',sans-serif;color:var(--g800);background:var(--white);l
 /* TABLE */
 .nf{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px}
 .nf th{text-align:left;padding:12px 16px;background:var(--teal);color:var(--white);font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase}
-.nf td{padding:12px 16px;border-bottom:1px solid var(--g200)}
+.nf td{padding:12px 16px;border-bottom:1px solid var(--g200);vertical-align:top}
 .nf tr:nth-child(even) td{background:var(--g50)}
 
 /* MICHELLE'S NOTES */
@@ -279,28 +279,114 @@ body{font-family:'Outfit',sans-serif;color:var(--g800);background:var(--white);l
 <div id="s3" class="tab-panel">
   <div class="s-header">
     <div class="s-label">Session 3</div>
-    <h2>Data Management in Sales: Setting Up Your CRM</h2>
-    <p>A CRM is where you track every interaction with prospects and clients. Without a system, you will lose deals. It is that simple.</p>
+    <h2>Your CRM: The Foundation of Every Sales Practice</h2>
+    <p>A CRM (Customer Relationship Management system) is the single most important tool in sales. It is where you track every person you speak to, every conversation you have, and every deal you are working on. This session covers what a CRM is, why it matters even for a solo freelancer, and how to set up HubSpot from scratch.</p>
   </div>
   <div class="cs">
-    <div class="co co-b"><div class="co-h">Why This Matters for You</div><p>As someone from a technical background, you intuitively understand structured data. A CRM is just a database for your sales activity. The discipline of logging everything is what separates people who "do some freelance work" from people who run a real practice.</p></div>
 
-    <h3>Setting up HubSpot (Free Tier)</h3>
-    <p>We recommend HubSpot's free CRM to start. It is powerful enough for a solo practitioner and scales well.</p>
+    <!-- WHY A CRM MATTERS -->
+    <h3>Why is a functioning CRM important?</h3>
+    <p>A CRM is not just a contact list. It is the system that ensures you never lose track of a conversation, never forget a follow-up, and never have to rely on memory to recall what a prospect told you three weeks ago. When used correctly, it does four things:</p>
+
     <div class="steps">
-      <div class="step"><div class="sn">1</div><div class="sc"><h5>Create your account</h5><p>Go to hubspot.com and sign up for the free CRM. Use your work email.</p></div></div>
-      <div class="step"><div class="sn">2</div><div class="sc"><h5>Connect your email</h5><p>Settings >> Integrations >> Email Integrations. Connect Gmail. Tick "Log" to have emails logged against deals. Tick "Track" to see when people open your emails.</p></div></div>
-      <div class="step"><div class="sn">3</div><div class="sc"><h5>Add your contacts</h5><p>With Gmail connected, contacts are created automatically. Otherwise: Contacts >> Create Contact. Work emails (e.g. john@acme.com) auto-create a Company record.</p></div></div>
-      <div class="step"><div class="sn">4</div><div class="sc"><h5>Set up your Deals pipeline</h5><p>Each Deal = a potential project. View as Board (Kanban) or Table. Always associate the Contact and Company to each Deal so emails sync.</p></div></div>
-      <div class="step"><div class="sn">5</div><div class="sc"><h5>Log everything</h5><p>Inside each Deal: log calls, meetings, emails. Emails sync automatically. Calls and meetings: log manually using the buttons inside the Deal.</p></div></div>
+      <div class="step"><div class="sn">1</div><div class="sc"><h5>Centralise all contact information in one spot</h5><p>Track every person you interact with, their company, their role, and any notes about your relationship. No more scattered spreadsheets, sticky notes, or email threads you have to search through.</p></div></div>
+      <div class="step"><div class="sn">2</div><div class="sc"><h5>Keep your contacts warm</h5><p>The sheer number of interactions you manage day to day invites human error. A CRM with tasks and reminders ensures every contact is followed up on a regular basis and nobody falls through the cracks.</p></div></div>
+      <div class="step"><div class="sn">3</div><div class="sc"><h5>Track your pipeline</h5><p>A CRM lets you see all your opportunities in one view. You can see exactly where each deal sits, what needs to happen next, and forecast your income. Without this, you are guessing.</p></div></div>
+      <div class="step"><div class="sn">4</div><div class="sc"><h5>De-risk your practice</h5><p>If everything is in your head, your business is fragile. If it is in a CRM, you have a system that works whether you are having a good week or a bad one. It also means if you ever bring on a collaborator or partner, they can see exactly where things stand.</p></div></div>
     </div>
 
-    <h3>Standard Notes Format</h3>
-    <p>Every call or meeting note should follow this structure:</p>
+    <div class="co co-b"><div class="co-h">Why This Matters for You Specifically</div><p>As someone from a technical background, you intuitively understand structured data. Think of a CRM as a relational database for your sales activity. Contacts link to Companies. Companies link to Deals. Deals have stages, amounts, and activities logged against them. The discipline of keeping this data clean is what separates people who "do some freelance work on the side" from people who run a real practice.</p></div>
+
+    <!-- THE THREE OBJECTS -->
+    <h3>How a CRM is structured</h3>
+    <p>Every CRM, whether it is HubSpot, Salesforce, or anything else, is built around three core objects. Understanding this structure is essential before you start using one.</p>
+
+    <table class="nf">
+      <thead><tr><th>Object</th><th>What it stores</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Contacts</strong></td><td>Individual people. Their name, email, phone number, job title, and any notes about them.</td><td>Sarah Chen, Head of Operations at Acme Corp</td></tr>
+        <tr><td><strong>Companies</strong></td><td>The organisations those people belong to. Company name, website, industry, size.</td><td>Acme Corp, acmecorp.com.au, Manufacturing, 200 employees</td></tr>
+        <tr><td><strong>Deals / Opportunities</strong></td><td>The potential projects or sales you are working on. Each Deal has a name, value, stage, and expected close date.</td><td>"Acme Corp - Lead Gen Automation", $15,000, Proposal Sent, Close by 30 June</td></tr>
+      </tbody>
+    </table>
+
+    <p>These three objects are connected. A Contact belongs to a Company. A Deal is linked to both a Contact and a Company. When you log a call or send an email, it gets recorded against the Contact and automatically appears on the Deal. This is what gives you full visibility.</p>
+
+    <div class="co co-a"><div class="co-h">Key Concept</div><p>Always associate your Contacts to Companies, and your Deals to both Contacts and Companies. If you do not link them properly, emails will not sync to deals, activity will not show up in the right places, and your CRM becomes a mess very quickly.</p></div>
+
+    <!-- HUBSPOT PILLARS -->
+    <h3>The four pillars of a healthy CRM</h3>
+    <p>Whether you are a solo freelancer or part of a 50 person sales team, a healthy CRM comes down to four disciplines:</p>
+
+    <div class="steps">
+      <div class="step"><div class="sn">1</div><div class="sc"><h5>Every contact you speak to is in the CRM</h5><p>This provides a single source of truth. It also gives you context on any previous communication with that person, so you never repeat yourself or forget something important.</p></div></div>
+      <div class="step"><div class="sn">2</div><div class="sc"><h5>Every commercial opportunity has a Deal</h5><p>If someone has expressed interest in working with you, or you have identified them as a potential client, create a Deal. Make sure each Deal has a name, a dollar amount (even if estimated), an accurate close date, and a linked Company and Contact.</p></div></div>
+      <div class="step"><div class="sn">3</div><div class="sc"><h5>Move Deals along the pipeline stages</h5><p>Your pipeline is a visual board showing where each opportunity sits. As conversations progress, move Deals from one stage to the next. This gives you transparency on what your pipeline looks like and helps you forecast.</p></div></div>
+      <div class="step"><div class="sn">4</div><div class="sc"><h5>Log all activity and set follow-up tasks</h5><p>Log every call (including missed and voicemail), every email, every meeting. After each activity, set a follow-up task with a due date. Every open Deal should always have an active task assigned to it. If there is no next step, the deal is dead.</p></div></div>
+    </div>
+
+    <!-- SETTING UP HUBSPOT -->
+    <h3>Setting up HubSpot (Free Tier)</h3>
+    <p>We recommend HubSpot's free CRM to start. It is powerful, widely used, and scales well if you grow. Here is how to get set up step by step.</p>
+
+    <h4>Step 1: Create your account and connect your email</h4>
+    <p>Go to hubspot.com and sign up for the free CRM using your work email. Once you are in, connect your Gmail or Outlook immediately. This is the most important setup step because it means every email you send or receive will automatically be tracked against the right contact in HubSpot.</p>
+    <p>For Gmail: go to Settings >> Integrations >> Email Integrations and connect your account. Then when you are in Gmail, tick "Log" to have emails logged against all Deals associated with that email address, and tick "Track" to see when people have opened your emails.</p>
+
+    <h4>Step 2: Add your contacts</h4>
+    <p>If you have connected your email, Contacts are created automatically when you email someone (including personal ones, so be aware of that). If you need to add someone manually, go to Contacts >> Create Contact and fill in the details.</p>
+    <p>A useful shortcut: if you use a work email (e.g. sarah@acmecorp.com.au), HubSpot will automatically create a Company record for Acme Corp and pull basic information from the web. This avoids you having to create the Company separately and prevents duplicates.</p>
+
+    <h4>Step 3: Create Deals from Contacts</h4>
+    <p>The fastest way to create a Deal is to start from the Contact. After you create or open a Contact, look at the right-hand side of the page and click "+ Add" in the Deals box. This lets you create a new Deal or associate an existing one. The benefit of this method is that it automatically links the Contact and their Company to the Deal, so everything is connected from the start.</p>
+
+    <h4>Step 4: Set up your Deal pipeline stages</h4>
+    <p>Your pipeline is the visual board that shows where each opportunity sits. For a solo freelancer selling AI services, we recommend keeping it simple:</p>
+
+    <table class="nf">
+      <thead><tr><th>Stage</th><th>What it means</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Qualifying</strong></td><td>A new potential opportunity. You have identified them but not reached out yet.</td></tr>
+        <tr><td><strong>Contacted</strong></td><td>You have reached out but no meeting booked.</td></tr>
+        <tr><td><strong>Meeting Booked</strong></td><td>A meeting date is locked in.</td></tr>
+        <tr><td><strong>Qualified to Buy</strong></td><td>Meeting held and they are a real opportunity.</td></tr>
+        <tr><td><strong>Proposal Sent</strong></td><td>You have sent a proposal or scope of work.</td></tr>
+        <tr><td><strong>Closed Won</strong></td><td>They have said yes and you are starting work.</td></tr>
+        <tr><td><strong>Closed Lost</strong></td><td>They have said no or gone quiet.</td></tr>
+      </tbody>
+    </table>
+
+    <p>You can view your pipeline as a Board (Kanban style, with cards you drag between columns) or as a Table. Try both and see what works for you. The Board view is great for a quick visual overview. The Table view is better for filtering and sorting.</p>
+
+    <!-- LOGGING ACTIVITY -->
+    <h3>Logging activity: the non-negotiable habit</h3>
+    <p>This is the habit that makes or breaks your CRM. If you do not log activity, your CRM is just a fancy address book.</p>
+
+    <div class="co co-r"><div class="co-h">Activity Rules</div>
+      <p>Every interaction with a prospect or client must be logged against a Deal. This includes all calls (including missed and voicemail), all emails, all meetings, and communications on other platforms like LinkedIn. Always add notes for context, and always finish by creating a follow-up task.</p>
+    </div>
+
+    <h4>How to log activity in HubSpot</h4>
+    <p>Inside any Deal, you will see a ribbon with buttons for Note, Email, Call, Log, Task, and Meet. This is where all activity is logged.</p>
+
+    <table class="nf">
+      <thead><tr><th>Activity</th><th>How to log it</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Email</strong></td><td>Should happen automatically if your email is connected. If not, click the Emails tab in the Deal and click "Log Email". Link the contact, set the date/time, and describe the email.</td></tr>
+        <tr><td><strong>Call</strong></td><td>Click the Calls tab, then "Log Call". Link the contact, select the call outcome (connected, left voicemail, no answer), set the date/time, and leave notes.</td></tr>
+        <tr><td><strong>Meeting</strong></td><td>Click the Meetings tab, then "Log Meeting". Link all attendees, set the outcome, specify date/time/duration, and add detailed meeting notes.</td></tr>
+        <tr><td><strong>Task</strong></td><td>Click the Task tab, then "Create Task". Name it clearly, add a due date, set a reminder, and leave detailed notes on what needs to happen.</td></tr>
+      </tbody>
+    </table>
+
+    <!-- NOTES FORMAT -->
+    <h3>Standard notes format</h3>
+    <p>Every call or meeting note should follow this structure. Consistency makes it easy to pick up where you left off.</p>
+
     <table class="nf">
       <thead><tr><th>Field</th><th>What to capture</th></tr></thead>
       <tbody>
-        <tr><td><strong>Attendees</strong></td><td>Who attended and who missed</td></tr>
+        <tr><td><strong>Attendees</strong></td><td>Who attended and who missed the meeting</td></tr>
         <tr><td><strong>Priorities</strong></td><td>Top 3 priorities of the person you met with</td></tr>
         <tr><td><strong>Pitched</strong></td><td>Top 3 things you pitched or discussed</td></tr>
         <tr><td><strong>Next Steps</strong></td><td>Specific actions with dates and owners</td></tr>
@@ -308,7 +394,37 @@ body{font-family:'Outfit',sans-serif;color:var(--g800);background:var(--white);l
       </tbody>
     </table>
 
-    <div class="co co-t"><div class="co-h">The Golden Rule</div><p>If it is not in the CRM, it did not happen. Log activity immediately after every interaction. The 2 minutes it takes will save you 20 minutes trying to remember what you discussed a week later.</p></div>
+    <div class="co co-t"><div class="co-h">Post-Meeting Expectations</div><p>Log your notes to HubSpot within 15 minutes of completing the meeting. This ensures the content stays fresh and you plan or complete any action items before moving onto other work. Make sure notes are clear enough that someone else could read them and understand what was discussed. Call out action items and next steps at the bottom, separated from the general discussion notes.</p></div>
+
+    <!-- TASK MANAGEMENT -->
+    <h3>Task management: your daily operating system</h3>
+    <p>Tasks are reminders, to-do lists, and your daily sales operating system. They ensure consistent engagement with prospects and make it impossible to forget a follow-up.</p>
+
+    <h4>Tips for tasks</h4>
+    <ul>
+      <li>Every open Deal should have an open task associated with it. No exceptions. If a Deal has no next step, it is either dead or you have forgotten about it.</li>
+      <li>Stagger your task due dates. It is easy but impractical to set all tasks for the same day. Spread them out so you have a manageable daily workload.</li>
+      <li>When completing a task, always add a note about what happened, then create the next follow-up task. The cycle never stops until the Deal is Closed Won or Closed Lost.</li>
+      <li>To view all your tasks, go to Sales >> Tasks. You can filter by Due Today, Overdue, Upcoming, and Completed.</li>
+    </ul>
+
+    <!-- THE DEAL JOURNEY -->
+    <h3>The typical Deal journey</h3>
+    <p>Here is how a Deal typically flows through your pipeline, and what should happen at each stage:</p>
+
+    <div class="steps">
+      <div class="step"><div class="sn">1</div><div class="sc"><h5>Deal created in Qualifying</h5><p>You have identified a potential opportunity. Create the Deal and set a task to reach out.</p></div></div>
+      <div class="step"><div class="sn">2</div><div class="sc"><h5>Outreach</h5><p>You make contact. If they answer and it is positive, move to the next stage and set a follow-up task based on the conversation. If they do not answer, set a follow-up task for next week and try again.</p></div></div>
+      <div class="step"><div class="sn">3</div><div class="sc"><h5>Positive outcome: Meeting booked</h5><p>Move the Deal to Meeting Booked. Log the call. Create a task for meeting prep.</p></div></div>
+      <div class="step"><div class="sn">4</div><div class="sc"><h5>Meeting held</h5><p>If it is a genuine opportunity, move to Qualified to Buy. Log the meeting notes. Create a follow-up task.</p></div></div>
+      <div class="step"><div class="sn">5</div><div class="sc"><h5>Proposal sent</h5><p>Move to Proposal Sent. Set a follow-up task for 3 to 5 business days to check in.</p></div></div>
+      <div class="step"><div class="sn">6</div><div class="sc"><h5>Closed</h5><p>Move to Closed Won (they said yes) or Closed Lost (they said no). Even on a Closed Lost, set a follow-up task for 30 to 60 days. Timing changes and they may come back.</p></div></div>
+    </div>
+
+    <div class="co co-t"><div class="co-h">The Golden Rule</div><p>If it is not in the CRM, it did not happen. Log activity immediately after every interaction. The 2 minutes it takes will save you 20 minutes trying to remember what you discussed a week later. And always, always set the next task.</p></div>
+
+    <div class="ex"><div class="ex-l">Exercise</div><h4>Set up your HubSpot</h4><p>Before our next session, complete the following: create your free HubSpot account, connect your email, add 10 contacts (people you have spoken to about potential work, past clients, or warm leads), create at least 3 Deals in your pipeline, and set a follow-up task on each one. Come to the next session with your pipeline open so we can review it together.</p></div>
+
   </div>
   <div class="mn"><div class="mn-l">Michelle's Notes</div><h3>Session 3 Takeaways</h3><p>Space for your notes from the session.</p></div>
 </div>
